@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jemily Ortega | Future Auditor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=Playfair+Display:italic,wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hot-pink: #FF85A2;
+            --soft-pink: #FFD1DC;
+            --white-pink: #FFF0F3;
+            --dark-pink: #8E3A4D;
+            --glass: rgba(255, 255, 255, 0.85);
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--white-pink);
+            background-image: radial-gradient(#FFD1DC 1.5px, transparent 1px);
+            background-size: 25px 25px;
+            color: var(--dark-pink);
+            overflow-x: hidden;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--soft-pink);
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-pink);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: 0.4s;
+        }
+
+        nav a:hover { color: var(--hot-pink); transform: scale(1.1); }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 160px 20px 80px;
+            text-align: center;
+            background: linear-gradient(180deg, #FFF, var(--white-pink));
+        }
+
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 5px solid var(--hot-pink);
+            padding: 5px;
+            background: white;
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(255, 133, 162, 0.3);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 15px 0 5px;
+            font-style: italic;
+            color: var(--dark-pink);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #fff, 0 0 15px var(--soft-pink); }
+            to { text-shadow: 0 0 10px #fff, 0 0 30px var(--hot-pink); }
+        }
+
+        /* --- Sections --- */
+        section {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 30px;
+            border: 2px solid var(--soft-pink);
+            box-shadow: 12px 12px 0px var(--soft-pink);
+            opacity: 0;
+            transform: scale(0.95);
+            transition: 0.8s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        section.visible { opacity: 1; transform: scale(1); }
+
+        h2 {
+            border-bottom: 2px dashed var(--soft-pink);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .project-card {
+            background: var(--white-pink);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid var(--hot-pink);
+            margin-top: 20px;
+        }
+
+        ul.styled-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            list-style: none;
+        }
+
+        ul.styled-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--hot-pink);
+        }
+
+        .skills-tag {
+            display: inline-block;
+            background: var(--white-pink);
+            border: 1px solid var(--hot-pink);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        /* --- Footer --- */
+        .footer-hub {
+            text-align: center;
+            padding: 100px 20px;
+            background: var(--soft-pink);
+            border-radius: 60px 60px 0 0;
+            border-top: 4px solid var(--hot-pink);
+        }
+
+        .btn {
+            background: var(--dark-pink);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+        }
+
+        .btn:hover { transform: translateY(-5px); background: var(--hot-pink); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#skills">Skills</a>
+    </nav>
+
+    <header class="hero">
+        <img src="Assets/ProfilePic.jpeg" alt="Jemily Ortega" class="profile-img">
+        <h1>Jemily Ortega</h1>
+        <p style="font-weight: bold;">Rutgers Business School | Accounting ⭑｡𖦹°‧.</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a detail-oriented Accounting student at Rutgers Business School with a passion for precision and auditing. Fluent in English and Spanish, I combine analytical rigor with a proactive approach to problem-solving. Beyond my academic work, I am focused on building a strong foundation for professional licensure and preparing for the CPA exam.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects & Tech ⋆˚꩜｡</h2>
+        <div class="project-card">
+            <h3>Vault: Closet Liquidation App</h3>
+            <p>I developed a web application that applies <strong>Accounting Liquidation Logic</strong> to personal fashion assets. The app calculates "Net Realizable Value" based on brand-tier depreciation rules.</p>
+            <ul class="styled-list">
+                <li><strong>Accounting Logic:</strong> 3-Tier Impairment Model (Fast Fashion, Mid-Tier, Luxury).</li>
+                <li><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript.</li>
+                <li><strong>Feature:</strong> Generates a downloadable "Audit Report" for inventory valuation.</li>
+            </ul>
+            <a href="vault.html" class="btn" style="background: var(--hot-pink); width: 100%; text-align: center;">Launch Vault ⭑｡𖦹°‧.</a>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience & Involvement</h2>
+        <p><strong>Midland Bagels</strong> - Cashier & Mentor | Jul 2025 - Present</p>
+        <ul class="styled-list">
+            <li>Managing high-paced customer service for 70+ patrons per shift.</li>
+            <li>Training and mentoring new team members in daily operations.</li>
+        </ul>
+        <p><strong>Campus Involvement:</strong> ALPFA, Rutgers Accounting Association, MSNT.</p>
+    </section>
+
+    <section id="awards">
+        <h2>Awards & Achievements</h2>
+        <ul class="styled-list">
+            <li><strong>Dean’s List</strong> - Rutgers Business School (Fall 2024, Spring 2025, Fall 2025)</li>
+            <li><strong>Bilingual Certification</strong> - Fluent in English & Spanish</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <span class="skills-tag">Intermediate Accounting I & II</span>
+            <span class="skills-tag">Concepts of Auditing</span>
+            <span class="skills-tag">Cost & Managerial Accounting</span>
+            <span class="skills-tag">MS Excel (Expert)</span>
+            <span class="skills-tag">JavaScript</span>
+        </div>
+    </section>
+
+    <footer class="footer-hub" id="contact">
+        <div style="background: white; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; display: inline-block; margin-bottom: 20px; border: 1px solid var(--hot-pink);">✦ Preparing for the CPA Exam ✦</div>
+        <h2 style="display: block;">Audit the Future ⭑｡𖦹°‧.</h2>
+        <div style="margin-top: 30px;">
+            <a href="mailto:jgo31@scarletmail.rutgers.edu" class="btn">Reach Out</a>
+            <a href="https://www.linkedin.com/in/jemily-ortega/" target="_blank" class="btn">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
